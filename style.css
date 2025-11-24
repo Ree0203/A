@@ -1,0 +1,311 @@
+#envelope {
+	position: relative;
+	width: 50rem;
+	height: 30rem;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	margin-left: auto;
+	margin-right: auto;
+	top: 15rem;
+	background-color: #00334c;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, .2);
+	transition: all 0.3s;
+}
+.front {
+	position: absolute;
+	width: 0rem;
+	height: 0rem;
+	z-index: 3;
+}
+.flap {
+	border-left: 25rem solid transparent;
+	border-right: 25rem solid transparent;
+	border-bottom: 100rem solid transparent;
+/* a little smaller */
+	border-top: 15rem solid #00334c;
+/* a little larger */
+	transform-origin: top;
+	pointer-events: none;
+}
+.pocket {
+	border-left: 25rem solid #0077b2;
+	border-right: 25rem solid #0077b2;
+	border-bottom: 15rem solid #006da3;
+	border-top: 15rem solid transparent;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+.letter {
+	position: relative;
+	background-color: #fff;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 90%;
+	top: 5%;
+	border-radius: 6px;
+	box-shadow: 0 2px 26px rgba(0, 0, 0, .12);
+}
+.letter:after {
+    content: '';
+    position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: white;
+	animation: flipLetter 1s 6s;
+	transform-origin: bottom;
+	animation-fill-mode: both;
+}
+.words {
+	position: absolute;
+	left: 10%;
+	width: 80%;
+	height: 14%;
+	background-color: #eeeff0;
+}
+.words.line1 {
+	top: 15%;
+	width: 20%;
+	height: 7%;
+}
+.words.line2 {
+	top: 30%;
+}
+.words.line3 {
+	top: 50%;
+}
+.words.line4 {
+	top: 70%;
+}
+.open .flap {
+	transform: rotateX(180deg);
+	transition: transform 0.4s .2s ease, z-index 0.6s;
+	z-index: 1;
+}
+.close .flap {
+	transform: rotateX(0deg);
+	transition: transform 0.4s 0.9s ease, z-index 1s;
+	animation: closeFlap 1s; 
+}
+.close .letter {
+	animation: putIn 1s;
+	z-index: 1;
+}
+.open .letter {
+	animation: takeOut 1s 3s ease-out forwards; 
+}
+.hearts {
+	position: absolute;
+	top: 15rem;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+.heart {
+	position: absolute;
+	bottom: 0;
+	right: 10%;
+	pointer-events: none;
+}
+.heart:before, .heart:after {
+	position: absolute;
+	content: "";
+	left: 50px;
+	top: 0;
+	width: 50px;
+	height: 80px;
+	background: #d00000;
+	border-radius: 50px 50px 0 0;
+	transform: rotate(-45deg);
+	transform-origin: 0 100%;
+	pointer-events: none;
+}
+.heart:after {
+	left: 0;
+	transform: rotate(45deg);
+	transform-origin: 100% 100%;
+}
+.close .heart {
+	opacity: 0;
+	animation: none;
+}
+.a1 {
+	left: 20%;
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	transform: scale(0.6);
+	opacity: 1;
+	-webkit-animation: slideUp 4s linear 1, sideSway 2s ease-in-out 4 alternate;
+	-moz-animation: slideUp 4s linear 1, sideSway 2s ease-in-out 4 alternate;
+	animation-fill-mode: forwards;
+	animation-delay: 0.7s;
+}
+.a2 {
+	left: 55%;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+	-webkit-animation: slideUp 5s linear 1, sideSway 4s ease-in-out 2 alternate;
+	-moz-animation: slideUp 5s linear 1, sideSway 4s ease-in-out 2 alternate;
+	animation-fill-mode: forwards;
+	animation-delay: 0.7s;
+}
+.a3 {
+	left: 10%;
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 1;
+	-webkit-animation: slideUp 7s linear 1, sideSway 2s ease-in-out 6 alternate;
+	-moz-animation: slideUp 7s linear 1, sideSway 2s ease-in-out 6 alternate;
+	animation-fill-mode: forwards;
+	animation-delay: 0.7s;
+}
+
+body {
+	background-color: #a8e2ff;
+}
+.envlope-wrapper {
+	height: 380px;
+}
+.reset {
+	text-align: center;
+}
+.reset button {
+	font-weight: 800;
+	font-style: normal;
+	transition: all 0.1s linear;
+	-webkit-appearance: none;
+	background-color: transparent;
+	border: solid 2px #0077b2;
+	border-radius: 4px;
+	color: #0077b2;
+	display: inline-block;
+	font-size: 14px;
+	text-transform: uppercase;
+	margin: 5px;
+	padding: 10px;
+	line-height: 1em;
+	text-decoration: none;
+	min-width: 120px;
+	cursor: pointer;
+	position: relative; 
+	top: 23rem; 
+}
+.reset button:hover {
+	background-color: #0077b2;
+	color: #fff;
+}
+
+#envelope:hover { 
+	scale: 1.05;
+	transition: all 0.3s;
+}
+
+@-webkit-keyframes slideUp {
+	0% {
+		top: 0;
+	}
+	100% {
+		top: -600px;
+	}
+}
+@keyframes slideUp {
+	0% {
+		top: 0;
+	}
+	100% {
+		top: -50rem;
+	}
+}
+@-webkit-keyframes sideSway {
+	0% {
+		margin-left: 0px;
+	}
+	100% {
+		margin-left: 50px;
+	}
+}
+
+@keyframes sideSway {
+	0% {
+		margin-left: 0px;
+	}
+	100% {
+		margin-left: 50px;
+	}
+}
+
+@keyframes takeOut { 
+	0% { 
+		transform: translateY(0);
+		z-index: 2;
+	}
+
+	50% { 
+		transform: translateY(-35rem);
+	}
+
+	70% { 
+		z-index: 3;
+	}
+
+	100% { 
+		transform: translateY(-10rem);
+		z-index: 3; 
+	}
+}
+
+@keyframes putIn {
+	0% { 
+		transform: translateY(-10rem);
+		z-index: 3;
+	}
+
+	50% { 
+		transform: translateY(-35rem);
+		z-index: 3;
+	}
+
+	70% { 
+		z-index: 1; 
+	}
+
+	100% { 
+		transform: translateY(0rem);
+		z-index: 1;
+	}
+}
+
+@keyframes closeFlap { 
+	0% { 
+		z-index: 1;
+	}
+
+	90% { 
+		z-index: 1;
+	}
+
+}
+
+@keyframes flipLetter {
+	0% { 
+		transform: rotateX(0);
+	}
+	100% { 
+		transform: rotateX(-180deg);
+		top: 0;
+		bottom: 5rem;
+		left: 0;
+		right: 0;
+	}
+}
+
+
+/*letter - 1
+flap - 2
+pocket - 3
+*/
