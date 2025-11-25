@@ -1,8 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function() { 
     var envelope = document.getElementById('envelope');
-    var btn_open = document.getElementById("open");
-    var btn_reset = document.getElementById("reset");
 
 
     envelope.addEventListener("click",  function() { 
@@ -12,12 +10,11 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if(envelope.classList.contains("close")) { 
             envelope.classList.add("open"); 
             envelope.classList.remove("close"); 
+        } else { 
+            envelope.classList.add("open"); 
         }
     }); 
 
-
-    btn_open.addEventListener("click", open); 
-    btn_reset.addEventListener("click", close); 
 
     function open() {
         envelope.classList.add("open")

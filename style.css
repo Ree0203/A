@@ -10,6 +10,7 @@
 	background-color: #00334c;
 	box-shadow: 0 4px 20px rgba(0, 0, 0, .2);
 	transition: all 0.3s;
+	transform: rotate(-10deg);
 
 }
 .front {
@@ -44,8 +45,8 @@
 	margin-right: auto;
 	height: 90%;
 	top: 5%;
-	border-radius: 6px;
 	box-shadow: 0 2px 26px rgba(0, 0, 0, .12);
+	perspective: 100rem;
 }
 
 .close .letter2 { 
@@ -55,7 +56,6 @@
 	background-color: white;
 	animation: unflip 1s;
 	animation-fill-mode: both;
-	border-radius: 6px;
 }
 
 .open .letter2 { 
@@ -69,7 +69,6 @@
 	animation: flipLetter 1s 4s;
 	transform-origin: bottom;
 	animation-fill-mode: both;
-	border-radius: 6px;
 }
 
 .words {
@@ -100,15 +99,15 @@
 }
 .close .flap {
 	transform: rotateX(0deg);
-	transition: transform 0.4s 2s ease, z-index 1s;
-	animation: closeFlap 1s forwards; 
+	transition: transform 0.4s 3s ease, z-index 1s;
+	animation: closeFlap 3.3s forwards; 
 }
 .close .letter {
-	animation: putIn 1s 1s both;
+	animation: putIn 2s 1s ease-in backwards;
 	z-index: 1;
 }
 .open .letter {
-	animation: takeOut 1s 3s ease-out forwards; 
+	animation: takeOut 2s 3s ease-out forwards; 
 }
 .hearts {
 	position: absolute;
@@ -186,34 +185,6 @@ body {
 	height: 380px;
 
 }
-.reset {
-	text-align: center;
-}
-.reset button {
-	font-weight: 800;
-	font-style: normal;
-	transition: all 0.1s linear;
-	-webkit-appearance: none;
-	background-color: transparent;
-	border: solid 2px #0077b2;
-	border-radius: 4px;
-	color: #0077b2;
-	display: inline-block;
-	font-size: 14px;
-	text-transform: uppercase;
-	margin: 5px;
-	padding: 10px;
-	line-height: 1em;
-	text-decoration: none;
-	min-width: 120px;
-	cursor: pointer;
-	position: relative; 
-	top: 23rem; 
-}
-.reset button:hover {
-	background-color: #0077b2;
-	color: #fff;
-}
 
 #envelope:hover { 
 	scale: 1.05;
@@ -256,42 +227,49 @@ body {
 
 @keyframes takeOut { 
 	0% { 
-		transform: translateY(0);
+		transform: translateY(0) rotate(0);
 		z-index: 2;
 	}
 
+
+	30% { 
+		transform: translateY(-35rem) rotate(10deg);
+	}
+
 	50% { 
-		transform: translateY(-35rem);
-		border-bottom-left-radius: 0px;
-		border-bottom-right-radius: 0px;
+		transform: translateY(0);
+		transform: rotate(10deg);
+
 	}
 
 	70% { 
 		z-index: 6;
+		transform: rotate(10deg);
+
 	}
 
 	100% { 
-		transform: translateY(-10rem);
 		z-index: 6; 
+		top: -10rem;
+		transform: rotate(10deg);
 	}
 }
 
 @keyframes putIn {
 	0% { 
-		transform: translateY(-10rem);
+		transform: translateY(-10rem) rotate(10deg);
 		z-index: 6;
 	}
-
 	30% { 
 		z-index: 6;
 	}
 	50% { 
 		transform: translateY(-35rem);
 		z-index: 6;
-
 	}
 
 	70% { 
+
 		z-index: 3; 
 	}
 
@@ -335,7 +313,7 @@ body {
 @keyframes unflip {
 	0% { 
 		position: absolute;
-		transform: rotateX(180deg);
+		transform: rotateX(-180deg);
 		top: 5rem;
 		bottom: 0rem;
 		left: 0rem;
