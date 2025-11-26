@@ -1,8 +1,9 @@
-
+console.log("script loaded")
 document.addEventListener("DOMContentLoaded", function() { 
+    console.log("dom loaded"); 
     var envelope = document.getElementById('envelope');
-
-
+    
+    
     envelope.addEventListener("click",  function() { 
         if(envelope.classList.contains("open")){ 
             envelope.classList.add("close");
@@ -16,6 +17,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }); 
 
 
+   
+    
     function open() {
         envelope.classList.add("open")
         envelope.classList.remove("close");
