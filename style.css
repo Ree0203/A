@@ -1,3 +1,4 @@
+
 #envelope {
 	position: relative;
 	width: 50rem;
@@ -6,12 +7,12 @@
 	border-bottom-right-radius: 6px;
 	margin-left: auto;
 	margin-right: auto;
-	top: 15rem;
+	top: 30rem;
 	background-color: #00334c;
 	box-shadow: 0 4px 20px rgba(0, 0, 0, .2);
 	transition: all 0.3s;
 	transform: rotate(-10deg);
-
+	font-family: "Inter";
 }
 .front {
 	position: absolute;
@@ -43,10 +44,11 @@
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
-	height: 90%;
+	height: 88%;
 	top: 5%;
 	box-shadow: 0 2px 26px rgba(0, 0, 0, .12);
 	perspective: 100rem;
+	padding: 1rem;
 }
 
 
@@ -99,6 +101,7 @@
 
 .letterBack { 
 	transform: rotateX(180deg);
+	padding: 1rem;
 }
 .open .container { 
 	position: absolute;
