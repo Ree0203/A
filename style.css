@@ -378,7 +378,8 @@ html {
 }
 .bodyLogin { 
 	font-family: 'Inter';
-	background-image: url(loginBackground.jpg);
+	background-image: url(YSsUpP.png);
+	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	display: flex;
@@ -391,10 +392,10 @@ html {
 
 .loginContainer { 
 	position: relative;
-	height: 20rem;
+	height: 18rem;
 	width: 30rem;
-	border-radius: 10px;
-	backdrop-filter: blur(30px);
+	border-radius: 20px;
+	background-color: white;
 	box-shadow: rgba(14, 3, 3, 0.2) 0px 8px 24px;
 	border: 2px solid rgba(255, 255, 255, 0.5); 
 	padding-left: 2rem;
@@ -402,7 +403,7 @@ html {
 }
 
 .loginContainer p { 
-	color: #edf2f4;
+	color: #F875AA;
 	font-weight: 600;
 	font-size: 2rem;
 	display: flex;
@@ -414,31 +415,28 @@ html {
 	outline: none;
 	border: none;
 	font-family: 'Inter';
-	width: 100%;
-	height: 3em;
-	border-bottom: 2px solid #2b2d42;
+	height: 3rem;
+	border-bottom: 2px solid #E83C91;
 	font-size: 1rem;
-	color: white;
-	position: relative; 
-	top: 1.1rem;
-}
-
-.anniv::placeholder { 
-	color: #2b2d42;
+	color: #E83C91;
+	position: absolute; 
+	bottom: 7.6rem;
+	right: 2rem;
+	left: 2rem;
 }
 
 button { 
 	font-size: 1rem;
 	font-family: 'Inter';
-	background-color: #2b2d42;
+	background-color: #FF8FB7;
 	outline: none;
 	border: none; 
-	border-radius: 5px;
+	border-radius: 10px;
 	color: white;
 	font-weight: bold;
 	position: absolute;
 	height: 3rem;
-	bottom: 3rem;
+	bottom: 2rem;
 	right: 1rem;
 	left: 1rem;
 	transition: .3s ease;
@@ -446,19 +444,19 @@ button {
 
 
 .anniv:focus ~ label, .anniv:valid~label{ 
-	transform: translateY(-1.3rem);
+	transform: translateY(-1.6rem);
 	
 }
 
 label { 
 	position: absolute;
 	top: 8rem;
-	color: #2b2d42;
+	color: #E83C91;
 	transition: .5s ease;
 }
 
 button:hover { 
-	background-color: rgb(53, 59, 107);
+	background-color: #E83C91;
 }
 
 .wrong { 
@@ -466,7 +464,7 @@ button:hover {
 	left: 50%;
 	transform: translate(-50%,-50%);
 	position: absolute;
-	bottom: 7em; 
-	color: #ef233c;
+	bottom: 5rem; 
+	color: #F875AA;
 	font-weight: bold;
 }
