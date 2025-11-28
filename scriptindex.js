@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("button works"); 
         const inputValue = input.value; 
         if(inputValue == "02/09/2023") { 
-            console.log("correct")
+            window.location.href = "main.html"; 
             wrong.style.display = "none"; 
         } else { 
             console.log(wrong); 
