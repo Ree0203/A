@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     setTimeout(function() { 
         greetCard.classList.add("fade-out"); 
+        mainContent.style.display = "flex"; 
     }, 22000); 
 
     var envelope = document.getElementById('envelope');
