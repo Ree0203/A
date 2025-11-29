@@ -8,7 +8,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	top: 30rem;
-	background-color: #00334c;
+	background-color: #C562AF;
 	box-shadow: 0 4px 20px rgba(0, 0, 0, .2);
 	transition: all 0.3s;
 	transform: rotate(-10deg);
@@ -25,15 +25,15 @@
 	border-right: 25rem solid transparent;
 	border-bottom: 100rem solid transparent;
 /* a little smaller */
-	border-top: 15rem solid #00334c;
+	border-top: 15rem solid #B33791;
 /* a little larger */
 	transform-origin: top;
 	pointer-events: none;
 }
 .pocket {
-	border-left: 25rem solid #0077b2;
-	border-right: 25rem solid #0077b2;
-	border-bottom: 15rem solid #006da3;
+	border-left: 25rem solid #DB8DD0;
+	border-right: 25rem solid #DB8DD0;
+	border-bottom: 15rem solid #C562AF;
 	border-top: 15rem solid transparent;
 	border-bottom-left-radius: 6px;
 	border-bottom-right-radius: 6px;
