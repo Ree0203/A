@@ -658,7 +658,7 @@ body {
 }
 .description, .list { 
 	font-family: "Montserrat";
-	font-size: 1vw;
+	font-size: 1.1rem;
 	padding: 2rem;
 	color: #EE6983;
 	line-height: 2.5rem;
