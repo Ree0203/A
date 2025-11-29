@@ -12,7 +12,7 @@
 	box-shadow: 0 4px 20px rgba(0, 0, 0, .2);
 	transition: all 0.3s;
 	transform: rotate(-10deg);
-	font-family: "Inter";
+	font-family: "Montserrat";
 }
 .front {
 	position: absolute;
@@ -39,6 +39,7 @@
 	border-bottom-right-radius: 6px;
 }
 .letter {
+	line-height: 2rem;
 	position: relative;
 	background-color: #fff;
 	width: 90%;
@@ -561,6 +562,11 @@ body {
 	}
 }
 
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url(Montserrat-VariableFont_wght.ttf);
+}
 .main-content { 
 	display: flex;
 	align-items: center;
@@ -604,6 +610,17 @@ body {
 
 }
 
+.list { 
+	display: flex; 
+	align-items: center;
+}
+.description, .list { 
+	font-family: "Montserrat";
+	font-size: 1.5rem;
+	padding: 2rem;
+	color: #EE6983;
+	line-height: 2.5rem;
+}
 .gf-description	{
 	position: relative;
 	background-color: white;
@@ -612,6 +629,8 @@ body {
 	margin-left: 8rem;
 	border-radius: 10px;
 	box-shadow: -7px 0px 0px 0px #EE6983;
+	display: flex; 
+	align-items: center;
 }
 
 .title-gf { 
@@ -648,22 +667,41 @@ body {
 
 .us { 
 	height: 30rem;
-	width: 70rem;
+	width: 100rem;
 	margin-top: 13rem;
 	border-radius: 10px;
 	display: flex;
 	align-items: center;
 	justify-content:space-around;
-	position: relative;
-	
+	position: relative;	
+	transition: ease;
 }
 
+.us-image:hover { 
+	scale: 1.1;
+}
+.us img { 
+	height: 100%;
+	width: 100%;
+	border-radius: 300rem;
+	object-fit: cover;
+}
+
+.us2 { 
+	object-position: -1.5rem;
+}
+
+.us3 { 
+	object-position: 0 -7rem;
+}
 .us-image { 
 	height: 25rem;
 	width: 25rem;
 	background-color: white;
 	border-radius: 200px;
 	box-shadow: rgba(14, 3, 3, 0.2) 0px 8px 24px;
+	padding: .5rem;
+	transition: 0.3s ease;
 }
 
 .us-title { 
@@ -688,19 +726,75 @@ body {
 	width: 100%;
 	margin-top: 13rem;
 	align-items: center;
-
 }
 
+.music-title { 
+	font-family: "HappyEnding";
+	position: absolute;
+	top: -4rem;
+	font-size: 3rem;
+	display: flex;
+	justify-content: center;
+	width: calc(100% - 4rem);
+	color: #EE6983;
+}
 .music-description { 
+	position: relative;
 	width: 100%;
 	background-color: white;
 	border-radius: 10px;
 	margin-right: 3rem;
 	height: 80%;
 	box-shadow: 7px 0px 0px 0px #EE6983;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	padding-top: 2rem;
 }
 
+
+.embed { 
+	position: absolute;
+	bottom: 2rem;
+	right: 2rem;
+	left: 2rem;
+	width: calc(100% - 4rem);
+}
 .music-disk { 
 	scale: .9;
+}
+
+.music-track { 
+	display: flex;
+	font-family: "Montserrat";
+}
+
+.musictitle { 
+	margin-left: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: .5rem;
+}
+
+.musicdescription { 
+	position: relative;
+	font-family: "Montserrat";
+	color: grey;
+	margin-left: 3rem;
+	margin-top: 2.5rem;
+	line-height: 1.7rem;
+}
+
+.musicdescription::before { 
+	content: '';
+	position: absolute;
+	background-color: rgba(128, 128, 128, 0.192);
+	height: 100%;
+	width: .25rem;
+	border-radius: 100rem;
+	left: -2rem;
+}
+.music-track img { 
+	height: 3rem;
+	padding-left: 1rem;
 }
 
